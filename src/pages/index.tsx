@@ -57,7 +57,9 @@ const Home: NextPage = () => {
           </Link>
         ))
       )}
-      {data && data.length <= 0 && <p>We could not find anything related to your search :(</p>}
+      {data && data.search.business.length <= 0 && (
+        <p>We could not find anything related to your search :(</p>
+      )}
     </div>
   )
 }

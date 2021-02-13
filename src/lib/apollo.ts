@@ -13,7 +13,7 @@ function createApolloClient(): ApolloClient<NormalizedCacheObject> {
     link: new HttpLink({
       uri: `http://localhost:3000/api/yelp`,
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_YELP_APIKEY}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY}`,
         'Accept-Language': 'en_US',
       },
     }),
