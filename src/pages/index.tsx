@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const inputRef = useRef(null)
   //State fo store user input
   const [search, setSearch] = useState('')
-  const [loadInput, { called, loading, data, error }] = useLazyQuery(SEARCH_QUERY, {
+  const [loadInput, { loading, data, error }] = useLazyQuery(SEARCH_QUERY, {
     variables: {
       term: search,
     },
@@ -42,6 +42,9 @@ const Home: NextPage = () => {
             <p>{d.name}</p>
           </Link>
         ))
+      )}
+      {data && data.search.business.length <= 0 && (
+        <p>We could not find anything related to your search :(</p>
       )}
     </div>
   )
