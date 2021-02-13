@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const inputRef = useRef(null)
   //State fo store user input
   const [search, setSearch] = useState('')
-  const [loadInput, { loading, data, error }] = useLazyQuery(SEARCH_QUERY, {
+  const [loadInput, { loading, data }] = useLazyQuery(SEARCH_QUERY, {
     variables: {
       term: search,
     },
