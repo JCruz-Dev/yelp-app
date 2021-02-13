@@ -12,9 +12,10 @@ function createApolloClient(): ApolloClient<NormalizedCacheObject> {
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
       uri: `http://localhost:3000/api/yelp`, 
-      credentials: 'same-origin',
       headers: {
-          Autorization: `Bearer ${process.env.NEXT_PUBLIC_YELP_APIKEY}`
+        Authorization:
+          'Bearer NPyvDxaBMFtDv2WBJw6KKXPcRkj7B7QT2XFDXKdfrRPCn3CyAISaSvVZgHL6BEGGZ3L8i05zcl460Ez6dxJM8sMBiDfFUNBpbYeXOW4FzKa8tikm5iWcHcORZvslYHYx',
+        'Accept-Language': 'en_US'
       }
     }),
     cache: new InMemoryCache(),
