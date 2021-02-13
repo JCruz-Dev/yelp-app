@@ -4,16 +4,26 @@ import { NextPage } from 'next'
 import { useLazyQuery } from '@apollo/client'
 import { SEARCH_QUERY } from 'queries'
 import Link from 'next/link'
-import { EventForm } from '../types/index'
-
+import { EventForm, AppDispatch, businessState, userSearch } from '../typescript/types'
+import { useDispatch, useSelector } from 'react-redux'
+import { saveData } from '../redux/slices/userDataReducer'
 const Home: NextPage = () => {
+  //dispatch action
+  const dispatch = useDispatch<AppDispatch>()
+  //Get state from store
+  const state: Array<businessState> = useSelector((state: userSearch) => state.userData.queryData)
   //Use Ref to get input value
   const inputRef = useRef(null)
-  //State fo store user input
+  //State foe store user input
   const [search, setSearch] = useState('')
+  //Query Data
   const [loadInput, { loading, data }] = useLazyQuery(SEARCH_QUERY, {
     variables: {
       term: search,
+    },
+    //When success, save in the store
+    onCompleted: (data) => {
+      dispatch(saveData(data.search.business))
     },
   })
   const handleSubmit = (e: EventForm): void => {
@@ -36,16 +46,18 @@ const Home: NextPage = () => {
       {loading ? (
         <p>Loading....</p>
       ) : (
-        data &&
-        data.search.business.map((d) => (
+        state &&
+        state.map((d) => (
           <Link href={`/business/${d.id}`} key={d.id}>
-            <p>{d.name}</p>
+            <a>
+              <p>
+                {d.name} {d.viewed && <span>[visto]</span>}
+              </p>
+            </a>
           </Link>
         ))
       )}
-      {data && data.search.business.length <= 0 && (
-        <p>We could not find anything related to your search :(</p>
-      )}
+      {data && data.length <= 0 && <p>We could not find anything related to your search :(</p>}
     </div>
   )
 }
