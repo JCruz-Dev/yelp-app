@@ -2,11 +2,13 @@ import { useState, useRef } from 'react'
 import Head from 'next/head'
 import { NextPage } from 'next'
 import { useLazyQuery } from '@apollo/client'
-import { SEARCH_QUERY } from 'queries'
 import Link from 'next/link'
-import { EventForm, AppDispatch, businessState, userSearch } from '../typescript/types'
+import { EventForm, AppDispatch, businessState, userSearch } from '@PTypes'
 import { useDispatch, useSelector } from 'react-redux'
-import { saveData } from '../redux/slices/userDataReducer'
+import { saveData } from '@ReduxSlices/userDataReducer'
+import LogoImage from '@Atoms/Logo'
+import { SEARCH_QUERY } from '@Queries'
+import Icon from '@Atoms/Icon'
 const Home: NextPage = () => {
   //dispatch action
   const dispatch = useDispatch<AppDispatch>()
@@ -39,6 +41,8 @@ const Home: NextPage = () => {
         <title>Yelp App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LogoImage />
+      <Icon svgIcon="pin" />
       <form onSubmit={handleSubmit}>
         <input type="text" name="search" id="search" placeholder="search for food" ref={inputRef} />
         <button type="submit">Submit</button>
