@@ -30,3 +30,8 @@ export type userSearch = {
     queryData: []
   }
 }
+//Function types
+
+export type SvgProp = {
+  svgIcon: string
+}
