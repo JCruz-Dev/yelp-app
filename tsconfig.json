@@ -6,7 +6,18 @@
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "@Assets/*":["./src/assets/*"],
+      "@PTypes":["./src/typescript/types/index.ts"],
+      "@Queries":["./src/queries/index.ts"],
+      "@PublicImages/*":["./public/images/*"],
+      "@Atoms/*":["./src/components/Atoms/*"],
+      "@Molecules/*":["./src/components/Molecules/*"],
+      "@Organisms/*": ["./src/components/Organisms/*"],
+      "@Templates/*":["./src/components/Template/*"],
+      "@ReduxSlices/*":["./src/redux/slices/*"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
