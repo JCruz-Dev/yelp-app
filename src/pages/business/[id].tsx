@@ -3,8 +3,8 @@ import { useQuery } from '@apollo/client'
 import { SEARCH_BUSINESS } from '../../queries/index'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { AppDispatch } from 'typescript/types'
-import { setViewed } from 'redux/slices/userDataReducer'
+import { AppDispatch } from '@PTypes'
+import { setViewed } from '@ReduxSlices/userDataReducer'
 export const Business = (): JSX.Element => {
   //dispatch action
   const dispatch = useDispatch<AppDispatch>()
