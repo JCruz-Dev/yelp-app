@@ -1,5 +1,6 @@
 .form {
   width: 100%;
+  max-width: rem(611px);
   display: grid;
   grid-template-columns: 1fr auto;
   &__input,

@@ -1,8 +1,14 @@
 .header__content {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 30;
+  position: sticky;
+  top: 0;
   svg {
     cursor: pointer;
   }

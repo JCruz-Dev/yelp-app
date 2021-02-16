@@ -1,11 +1,14 @@
 .container {
+  width: 100%;
   max-width: $container-max-width;
-  margin: 0 $spacing-s;
+  padding: 0 $spacing-s;
+  margin-left: auto;
+  margin-right: auto;
   @include fromQuery(medium) {
-    margin: 0 $spacing-m;
+    padding: 0 $spacing-m;
   }
   @include fromQuery(x-large) {
-    margin: 0 $spacing-l;
+    padding: 0 $spacing-l;
   }
 }
 .title {
