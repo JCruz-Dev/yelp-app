@@ -13,9 +13,9 @@
     &::placeholder {
       font-size: $smaller;
       color: $dark-200;
-    }
-    @include fromQuery(medium) {
-      font-size: $normal;
+      @include fromQuery(medium) {
+        font-size: $normal;
+      }
     }
   }
 
