@@ -35,3 +35,16 @@ export type userSearch = {
 export type SvgProp = {
   svgIcon: string
 }
+
+//Title types
+export type TitleProps = {
+  titleName: string
+  Tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  classes?: string
+}
+
+//Paragrap types
+export type ParagraphProps = {
+  classes?: string
+  name: string
+}
