@@ -1,0 +1,26 @@
+.container {
+  max-width: $container-max-width;
+  margin: 0 $spacing-s;
+  @include fromQuery(medium) {
+    margin: 0 $spacing-m;
+  }
+  @include fromQuery(x-large) {
+    margin: 0 $spacing-l;
+  }
+}
+.title {
+  font-size: $large;
+  @include fromQuery(medium) {
+    font-size: $biggest;
+  }
+  color: white;
+  margin-bottom: 1rem;
+}
+.paragraph {
+  font-size: $normal;
+  @include fromQuery(medium) {
+    font-size: $large;
+  }
+  color: white;
+  margin-bottom: 2rem;
+}

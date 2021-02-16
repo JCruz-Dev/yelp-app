@@ -1,4 +1,15 @@
-@import './utils/normalize.scss';
-@import './utils/reset.scss';
+//Utils
 @import './utils/variables.scss';
 @import './utils/queries.scss';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/normalize.scss';
+@import './utils/reset.scss';
+@import './utils/helpers.scss';
+//Components
+@import './components/header';
+@import './components/layout';
+@import './components/form';
+@import './components/loader';
+//Pages
+@import './pages/search';

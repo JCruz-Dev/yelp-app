@@ -1,0 +1,50 @@
+.loader {
+  background-color: white;
+  width: rem(288px);
+  height: rem(292px);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: $loader-color-container;
+  border-radius: rem(10px);
+  padding: 0.5rem;
+  box-shadow: 0 -2px 14px 0 $dark-500;
+  &__content {
+    padding: 0.5rem;
+    & > * {
+      border-radius: rem(4px);
+      @include loaderEffect();
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 150px;
+    border-radius: rem(10px);
+    margin-bottom: rem(11px);
+  }
+  &__title,
+  &__comments,
+  &__direction,
+  &__phone {
+    width: 100px;
+    height: 19px;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    width: 150px;
+  }
+  &__direction {
+    width: 130px;
+  }
+  &__phone {
+    width: 110px;
+  }
+}
+@keyframes bgPos {
+  0% {
+    background-position: -250px 0;
+  }
+  100% {
+    background-position: 250px 0;
+  }
+}

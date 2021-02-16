@@ -1,0 +1,27 @@
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  &__input,
+  &__button {
+    padding: 1rem;
+  }
+  &__input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    &::placeholder {
+      font-size: $smaller;
+      color: $dark-200;
+    }
+    @include fromQuery(medium) {
+      font-size: $normal;
+    }
+  }
+
+  &__button {
+    background-color: $main-color;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

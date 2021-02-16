@@ -1,0 +1,41 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Cabin', sans-serif;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: $bg-color;
+}
+input,
+button {
+  border: none;
+}
+input:focus,
+button:focus {
+  outline: 0.3rem;
+}
+button {
+  font-weight: 700;
+}

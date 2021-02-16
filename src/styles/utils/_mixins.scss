@@ -1,0 +1,45 @@
+@mixin fontSize($size) {
+  font-size: rem($size);
+}
+@mixin fromQuery($size) {
+  @if map-has-key($queries, $size) {
+    @media screen and (min-width: map-get($queries, $size)) {
+      @content;
+    }
+  } @else if type-of($size) == number and unit($size) == 'px' {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  } @else if type-of($size) == number and unit($size) == 'em' {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+}
+@mixin upToQuery($size) {
+  @if map-has-key($queries, $size) {
+    @media screen and (max-width: map-get($queries, $size)) {
+      @content;
+    }
+  } @else if type-of($size) == number and unit($size) == 'px' {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  } @else if type-of($size) == number and unit($size) == 'em' {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  }
+}
+@mixin loaderEffect {
+  background-color: $loader-color-100;
+  background-image: linear-gradient(
+    to right,
+    $loader-color-100 0%,
+    $loader-color-200 20%,
+    $loader-color-100 40%,
+    $loader-color-100 100%
+  );
+  background-repeat: no-repeat;
+  animation: 1s infinite linear bgPos;
+}

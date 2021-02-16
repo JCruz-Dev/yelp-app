@@ -1,0 +1,10 @@
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+  svg {
+    cursor: pointer;
+  }
+  padding-top: rem(24px);
+}

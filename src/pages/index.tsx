@@ -6,9 +6,11 @@ import Link from 'next/link'
 import { EventForm, AppDispatch, businessState, userSearch } from '@PTypes'
 import { useDispatch, useSelector } from 'react-redux'
 import { saveData } from '@ReduxSlices/userDataReducer'
-import LogoImage from '@Atoms/Logo'
 import { SEARCH_QUERY } from '@Queries'
-import Icon from '@Atoms/Icon'
+import Layout from '@Templates/Layout'
+import Title from '@Atoms/Title'
+import Paragraph from '@Atoms/Paragraph'
+import CardLoader from '@Templates/CardLoader'
 const Home: NextPage = () => {
   //dispatch action
   const dispatch = useDispatch<AppDispatch>()
@@ -41,29 +43,44 @@ const Home: NextPage = () => {
         <title>Yelp App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <LogoImage />
-      <Icon svgIcon="pin" />
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="search" id="search" placeholder="search for food" ref={inputRef} />
-        <button type="submit">Submit</button>
-      </form>
-      {loading ? (
-        <p>Loading....</p>
-      ) : (
-        state &&
-        state.map((d) => (
-          <Link href={`/business/${d.id}`} key={d.id}>
-            <a>
-              <p>
-                {d.name} {d.viewed && <span>[visto]</span>}
-              </p>
-            </a>
-          </Link>
-        ))
-      )}
-      {data && data.search.business.length <= 0 && (
-        <p>We could not find anything related to your search :(</p>
-      )}
+      <Layout>
+        <Title titleName="Welcome to Yelpi App" Tag="h1" />
+        <Paragraph name="The best place to search for a business" classes="search__paragram" />
+        <form onSubmit={handleSubmit} className="form">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search for food, drinks and much more."
+            ref={inputRef}
+            className="form__input"
+            required
+          />
+          <button type="submit" className="form__button">
+            Search
+          </button>
+        </form>
+      </Layout>
+      <div className="container">
+        <CardLoader />
+        {/* {loading ? (
+          <p>Loading....</p>
+        ) : (
+          state &&
+          state.map((d) => (
+            <Link href={`/business/${d.id}`} key={d.id}>
+              <a>
+                <p>
+                  {d.name} {d.viewed && <span>[visto]</span>}
+                </p>
+              </a>
+            </Link>
+          ))
+        )}
+        {data && data.search.business.length <= 0 && (
+          <p>We could not find anything related to your search :(</p>
+        )} */}
+      </div>
     </div>
   )
 }
