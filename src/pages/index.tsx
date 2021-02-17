@@ -50,9 +50,7 @@ const Home: NextPage = () => {
         <SearchForm callLazyQuery={loadInput} onSubmit={handleSubmit} />
       </Layout>
       <div className="container">
-        {state.length === 0 && !loading && data && data.search.business.length !== 0 && (
-          <EmptyMessage />
-        )}
+        {state.length === 0 && !loading && !data && <EmptyMessage />}
         <div className="card-grid">{loading ? <CardLoader /> : <BusinessContainer />}</div>
         {data && data.search.business.length <= 0 && <ErrorMessage />}
       </div>

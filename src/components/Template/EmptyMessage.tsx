@@ -4,7 +4,7 @@ const EmptyMessage = (): JSX.Element => {
   return (
     <div className="empty">
       <Icon svgIcon={'search-icon'} />
-      <p>Wow, your have not search anything yet. Start now!</p>
+      <p>Oh hey, you have not search anything yet. Start now!</p>
     </div>
   )
 }
