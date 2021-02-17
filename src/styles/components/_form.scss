@@ -25,4 +25,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+  @include fromQuery(x-large) {
+    grid-template-columns: 75% 156px;
+  }
 }
