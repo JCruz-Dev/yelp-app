@@ -15,9 +15,6 @@
   margin-bottom: rem(40px);
   height: rem(271px);
   @include fromQuery(medium) {
-    height: rem(479px);
-  }
-  @include fromQuery(x-large) {
     margin-bottom: rem(64px);
     height: rem(392px);
   }
