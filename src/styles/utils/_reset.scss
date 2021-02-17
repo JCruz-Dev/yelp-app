@@ -27,6 +27,7 @@ body {
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   background: $bg-color;
+  margin-bottom: 0.035rem;
 }
 input,
 button {
@@ -38,4 +39,8 @@ button:focus {
 }
 button {
   font-weight: 700;
+  cursor: pointer;
+}
+img {
+  width: 100%;
 }
