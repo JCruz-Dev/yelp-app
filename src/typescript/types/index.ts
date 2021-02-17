@@ -48,3 +48,22 @@ export type ParagraphProps = {
   classes?: string
   name: string
 }
+
+//Image Types
+export type ImageProps = {
+  imgSource: string
+  imgAlt: string
+  classes?: string
+}
+
+//Info Details Types
+export type infoDetailProps = {
+  icon: string
+  infoName: string | number
+}
+
+//Search Types
+export type searchFormProps = {
+  onSubmit: (search: string) => void
+  callLazyQuery: () => void
+}
