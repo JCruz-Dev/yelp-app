@@ -23,7 +23,7 @@ export const SEARCH_BUSINESS = gql`
       is_closed
       price
       id
-      name
+      businessname: name
       rating
       review_count
       photos
