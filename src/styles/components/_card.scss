@@ -1,0 +1,39 @@
+.card {
+  width: 100%;
+  height: rem(350px);
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: rem(4px);
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 192px 25px min-content auto;
+  row-gap: 0.5rem;
+  box-shadow: 0 -2px 14px 0 $dark-500;
+  &__image {
+    width: rem(272px);
+    height: rem(192px);
+    margin-bottom: rem(11px);
+    img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+      border-radius: rem(4px);
+      display: block;
+    }
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+      font-size: 1rem;
+    }
+  }
+  &__main__details {
+    width: rem(97px);
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    column-gap: rem(12px);
+    align-items: center;
+  }
+}
