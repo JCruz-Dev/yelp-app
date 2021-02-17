@@ -1,0 +1,11 @@
+.info__details {
+  display: flex;
+  align-items: center;
+  svg {
+    display: inline-block;
+    margin-right: rem(4px);
+  }
+  p {
+    color: $dark-100;
+  }
+}
