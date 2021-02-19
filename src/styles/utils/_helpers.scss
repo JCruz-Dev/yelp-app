@@ -8,7 +8,7 @@
     padding: 0 $spacing-m;
   }
   @include fromQuery(x-large) {
-    padding: 0 $spacing-l;
+    padding: 0 $spacing-s;
   }
 }
 .title {
@@ -36,4 +36,15 @@
   gap: 1rem;
   justify-content: center;
   margin-bottom: 2rem;
+}
+.d-grid-2--cols {
+  display: grid;
+  align-items: center;
+  column-gap: 0.5rem;
+  grid-template-columns: min-content max-content;
+  justify-content: center;
+  @include fromQuery(large) {
+    grid-template-columns: auto 1fr;
+    justify-content: flex-start;
+  }
 }
