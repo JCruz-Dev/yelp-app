@@ -1,10 +1,13 @@
 import { useRouter } from 'next/router'
 import { useQuery } from '@apollo/client'
 import { SEARCH_BUSINESS } from '../../queries/index'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from '@PTypes'
 import { setViewed } from '@ReduxSlices/userDataReducer'
+import Header from '@Molecules/Header'
+import BusinessInfo from '@Molecules/BusinessInfo'
+import BusinessLoader from '@Templates/BusinessLoader'
 export const Business = (): JSX.Element => {
   //dispatch action
   const dispatch = useDispatch<AppDispatch>()
@@ -15,17 +18,21 @@ export const Business = (): JSX.Element => {
       id: id,
     },
   })
+  console.log(data)
   useEffect(() => {
     dispatch(setViewed(`${id}`))
   })
   return (
     <>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <pre>
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
+      {useMemo(
+        () => (
+          <>
+            <Header />
+
+            {loading ? <BusinessLoader /> : <BusinessInfo {...data} />}
+          </>
+        ),
+        [data, loading]
       )}
     </>
   )
