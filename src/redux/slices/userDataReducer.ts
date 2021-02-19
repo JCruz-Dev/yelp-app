@@ -19,7 +19,9 @@ const userDataReducer = createSlice({
       //Get object
       const itemFinded = newState[itemIndex]
       //add property to selected item
-      itemFinded.viewed = true
+      if (itemFinded) {
+        itemFinded.viewed = true
+      }
       //set new State to original state and save selected item
       state.queryData = newState
       state.selectedItem = action.payload
