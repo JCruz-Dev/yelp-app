@@ -6,10 +6,14 @@ const userDataReducer = createSlice({
   initialState: {
     queryData: [],
     selectedItem: '',
+    searchParam: '',
   },
   reducers: {
     saveData: (state, action: PayloadActionObject) => {
       state.queryData = action.payload
+    },
+    saveSearchParam: (state, action: PayloadActionString) => {
+      state.searchParam = action.payload
     },
     setViewed: (state, action: PayloadActionString) => {
       //Copy State
@@ -28,5 +32,5 @@ const userDataReducer = createSlice({
     },
   },
 })
-export const { saveData, setViewed } = userDataReducer.actions
+export const { saveData, setViewed, saveSearchParam } = userDataReducer.actions
 export default userDataReducer.reducer

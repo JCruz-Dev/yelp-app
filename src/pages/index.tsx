@@ -4,7 +4,7 @@ import { NextPage } from 'next'
 import { useLazyQuery } from '@apollo/client'
 import { AppDispatch, businessState, userSearch } from '@PTypes'
 import { useDispatch, useSelector } from 'react-redux'
-import { saveData } from '@ReduxSlices/userDataReducer'
+import { saveData, saveSearchParam } from '@ReduxSlices/userDataReducer'
 import { SEARCH_QUERY } from '@Queries'
 import Layout from '@Templates/Layout'
 import Title from '@Atoms/Title'
@@ -30,6 +30,7 @@ const Home: NextPage = () => {
     //When success, save in the store
     onCompleted: (data) => {
       dispatch(saveData(data.search.business))
+      dispatch(saveSearchParam(search))
     },
   })
   const handleSubmit = useCallback(
