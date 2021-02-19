@@ -43,3 +43,9 @@
   background-repeat: no-repeat;
   animation: 1s infinite linear bgPos;
 }
+@mixin borderRadius {
+  border-radius: rem(4px);
+}
+@mixin cardShadow {
+  box-shadow: 0 -2px 14px 0 $dark-500;
+}
