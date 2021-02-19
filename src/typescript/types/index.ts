@@ -67,3 +67,25 @@ export type searchFormProps = {
   onSubmit: (search: string) => void
   callLazyQuery: () => void
 }
+
+//Business info Types
+export type businessInfoProps = {
+  business: {
+    businessname: string
+    rating: number
+    review_count: number
+    location: Location
+    phone: string
+    price: string
+    is_closed: boolean
+    reviews: [{ __typename: string; text: string }]
+    hours: [
+      {
+        __typename: string
+        open: [{ __tyname: string; start: string; end: string }]
+        is_open_now: boolean
+      }
+    ]
+    photos: Array<string>
+  }
+}
