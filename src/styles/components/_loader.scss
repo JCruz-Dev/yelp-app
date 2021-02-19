@@ -40,11 +40,45 @@
     width: 110px;
   }
 }
+.business__loader__container {
+  background-color: $dark-600;
+  padding-top: 2rem;
+  @include fromQuery(x-small) {
+    --height: 665px;
+  }
+  @include fromQuery(medium) {
+    --height: 895px;
+  }
+  @include fromQuery(large) {
+    --height: 359px;
+  }
+  height: var(--height);
+}
+.business__loader {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  @include fromQuery(large) {
+    grid-template-columns: 1fr 1fr;
+  }
+  column-gap: 2rem;
+  & > * {
+    border-radius: rem(4px);
+    @include loaderEffect();
+  }
+  .business__loader__info,
+  .business__loader__image {
+    width: 100%;
+    height: 280px;
+  }
+}
 @keyframes bgPos {
   0% {
-    background-position: -250px 0;
+    background-position: -280px 0;
   }
   100% {
-    background-position: 250px 0;
+    background-position: 280px 0;
   }
 }
