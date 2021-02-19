@@ -1,16 +1,22 @@
 .header__content {
   width: 100%;
-  max-width: $container-max-width;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 30;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  height: 4rem;
+  background-color: #352f2f;
   svg {
     cursor: pointer;
   }
-  padding-top: rem(24px);
+  .header__content__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

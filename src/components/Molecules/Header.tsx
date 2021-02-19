@@ -6,9 +6,11 @@ const Header: React.FC = (): JSX.Element => {
     <>
       {useMemo(
         () => (
-          <header className="header__content">
-            <LogoImage />
-            <Icon svgIcon="menu-icon" />
+          <header className={`header__content`}>
+            <div className="container header__content__items">
+              <LogoImage />
+              <Icon svgIcon="menu-icon" />
+            </div>
           </header>
         ),
         []
