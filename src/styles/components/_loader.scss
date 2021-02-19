@@ -74,6 +74,21 @@
     height: 280px;
   }
 }
+.loader__item__hour,
+.loader__item__review {
+  width: 100%;
+  @include loaderEffect();
+  @include borderRadius();
+}
+.loader__item__review,
+.loader__item__hour {
+  height: 280px;
+}
+.loader__item__hour {
+  @include fromQuery(large) {
+    max-width: rem(490px);
+  }
+}
 @keyframes bgPos {
   0% {
     background-position: -280px 0;
