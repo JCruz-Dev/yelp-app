@@ -44,11 +44,11 @@
 
 ## About The Project
 
-<img src="./app-new-review.png">
+<img src="./app-review.png">
 
 ### Built With
 
-- Typescsript
+- TypeScsript
 - Nextjs
 - Redux toolkit
 - Redux Persist
