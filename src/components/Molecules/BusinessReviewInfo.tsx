@@ -11,7 +11,7 @@ const BusinesReviewInfo: React.FC<reviewsProps> = ({ reviews }) => {
     <div className="business__secondary__review">
       {reviews.map((review, index) => (
         <article key={index} className="business__secondary__card__review__item">
-          <Icon svgIcon="chat" />
+          <Icon svgIcon="chat" title="chat icon" />
           <p>{review.text}</p>
         </article>
       ))}
