@@ -7,11 +7,12 @@ import { AppProps } from 'next/dist/next-server/lib/router/router'
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
 let apolloClient
+
 function createApolloClient(): ApolloClient<NormalizedCacheObject> {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: `http://localhost:3000/api/yelp`,
+      uri: `/api/yelp`,
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY}`,
         'Accept-Language': 'en_US',
