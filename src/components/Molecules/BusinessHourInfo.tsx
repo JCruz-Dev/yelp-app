@@ -15,7 +15,7 @@ const BusinessHourInfo: React.FC<BusinessHour> = ({ hours }): JSX.Element => {
         <div key={index} className="business__secondary__card__hour__item">
           <h3>{days[index]}</h3>
           <p>
-            {convertToHour(h.start)} AM - {convertToHour(h.end)} PM
+            {convertToHour(h.start)} - {convertToHour(h.end)}
           </p>
         </div>
       ))}
