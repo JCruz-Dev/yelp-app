@@ -18,7 +18,6 @@ export const Business = (): JSX.Element => {
       id: id,
     },
   })
-  console.log(data)
   useEffect(() => {
     dispatch(setViewed(`${id}`))
   })
