@@ -51,6 +51,7 @@
 - Typescsript
 - Nextjs
 - Redux toolkit
+- Redux Persist
 - Apollo Client
 - SASS for Styling
 - [Figma for the UI](https://www.figma.com/file/BuEYDB27UpPEvsPPBOy9ay/Yelp-app?node-id=0%3A1)
