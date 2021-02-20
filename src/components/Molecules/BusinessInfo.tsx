@@ -47,10 +47,10 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
               </div>
               <div className="business__main__info__phone d-grid-2--cols ">
                 <Icon svgIcon="phone-big" title="phone icon" />
-                <span>{business && phone}</span>
+                <span>{(business && phone) || 'N / A'}</span>
               </div>
               <div className="business__main__info__price">
-                <span>Price:</span> {business && price}
+                <span>Price:</span> {(business && price) || 'N / A'}
               </div>
               {hours[0].is_open_now ? (
                 <a
