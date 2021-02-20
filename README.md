@@ -12,7 +12,7 @@
     <br />
     <a href="https://github.com/juank1791/yelp-app"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/juank1791/yelp-app">View Demo</a>
+    <a href="https://yelpapp.vercel.app/">View Demo</a>
   </p>
 </p>
 
@@ -107,7 +107,7 @@ Juan Carlos cruz - juancarloscruz278@gmail.com
 
 Linkedin: [https://www.linkedin.com/in/juancarlos-cruz/](https://www.linkedin.com/in/juancarlos-cruz/)
 
-Project Link: [https://github.com/juank1791/yelp-app](https://github.com/juank1791/yelp-app)
+Project Link: [https://yelpapp.vercel.app/](https://yelpapp.vercel.app/)
 
 <!-- ACKNOWLEDGEMENTS -->
 

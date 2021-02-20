@@ -7,12 +7,11 @@ import { AppProps } from 'next/dist/next-server/lib/router/router'
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
 let apolloClient
-
 function createApolloClient(): ApolloClient<NormalizedCacheObject> {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: `/api/yelp`,
+      uri: `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/graphql`,
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY}`,
         'Accept-Language': 'en_US',
