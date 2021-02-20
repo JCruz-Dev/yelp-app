@@ -44,7 +44,7 @@
 
 ## About The Project
 
-<img src="./app-review.png">
+<img src="./app-new-review.png">
 
 ### Built With
 
