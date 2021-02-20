@@ -1,12 +1,12 @@
 import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist'
-import AsyncStorage from 'redux-persist/lib/storage'
+import sessionStorage from 'redux-persist/lib/storage/session'
 import userDataReducer from './slices/userDataReducer'
 
 const persistConfig = {
   key: 'root',
   version: 1,
-  storage: AsyncStorage,
+  storage: sessionStorage,
 }
 const reducer = combineReducers({
   userData: userDataReducer,
