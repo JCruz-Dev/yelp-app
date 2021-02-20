@@ -5,7 +5,7 @@
     
   </a>
 
-  <h3 align="center">YELP PP</h3>
+  <h3 align="center">YELP APP</h3>
 
   <p align="center">
     React application consuming Yelp Graphql API
