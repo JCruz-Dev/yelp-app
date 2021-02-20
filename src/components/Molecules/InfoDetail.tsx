@@ -4,7 +4,7 @@ import { infoDetailProps } from '@PTypes'
 const InfoDetail: React.FC<infoDetailProps> = ({ icon, infoName }) => {
   return (
     <div className="info__details">
-      <Icon svgIcon={icon} />
+      <Icon svgIcon={icon} title="info detail" />
       <p>{infoName}</p>
     </div>
   )
