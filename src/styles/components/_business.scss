@@ -5,20 +5,19 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    row-gap: 2rem;
     color: white;
+    @include fromQuery(large) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem;
+    }
   }
   &__detail {
     display: grid;
     grid-template-columns: min-content 1fr;
     column-gap: rem(8px);
     align-items: center;
-  }
-}
-.business__content {
-  @include fromQuery(large) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem;
   }
 }
 .business__main__info {
@@ -144,7 +143,7 @@
       @include borderRadius();
       @include cardShadow();
       background-color: white;
-      padding: 2rem rem(40px);
+      padding: 2rem rem(20px);
       display: flex;
       flex-direction: column;
       justify-content: center;
