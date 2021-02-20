@@ -5,7 +5,7 @@
     
   </a>
 
-  <h3 align="center">YELP PP</h3>
+  <h3 align="center">YELP APP</h3>
 
   <p align="center">
     React application consuming Yelp Graphql API
@@ -51,9 +51,10 @@
 - Typescsript
 - Nextjs
 - Redux toolkit
+- Redux Persist
 - Apollo Client
 - SASS for Styling
-- Figma for the UI
+- [Figma for the UI](https://www.figma.com/file/BuEYDB27UpPEvsPPBOy9ay/Yelp-app?node-id=0%3A1)
 
 <!-- GETTING STARTED -->
 
@@ -117,3 +118,4 @@ Project Link: [https://yelpapp.vercel.app/](https://yelpapp.vercel.app/)
 - [Nextjs](https://nextjs.org/)
 - [Apollo Client Docs](https://www.apollographql.com/docs/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Redux Persist](https://github.com/rt2zz/redux-persist)
