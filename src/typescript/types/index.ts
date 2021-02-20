@@ -35,6 +35,7 @@ export type userSearch = {
 
 export type SvgProp = {
   svgIcon: string
+  title: string
 }
 
 //Title types
