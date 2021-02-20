@@ -26,16 +26,16 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
               <h1 className="business__main__info__title">{business && businessname}</h1>
               <div className="business__main__info__details">
                 <div className="details__item" title="rating">
-                  <Icon svgIcon="star-big" />
+                  <Icon svgIcon="star-big" title="start icon" />
                   <span title="rating">{business && rating}</span>
                 </div>
-                <div className="details__item" title="reviews count">
-                  <Icon svgIcon="list-reviews-big" />
-                  <span>{business && review_count} </span>
+                <div className="details__item__reviews" title="reviews count">
+                  <span>{business && review_count}</span>
+                  <span>reviews</span>
                 </div>
               </div>
               <div className="business__main__info__location d-grid-2--cols ">
-                <Icon svgIcon="pin-big" />
+                <Icon svgIcon="pin-big" title="pin icon" />
                 <div className="business__main__location__content">
                   <span className="business__main__info__location__address" title="address">
                     {business && location.address1},
@@ -45,11 +45,13 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
                   </span>
                 </div>
               </div>
-              <div className="business__main__info__phone d-grid-2--cols  ">
-                <Icon svgIcon="phone-big" />
+              <div className="business__main__info__phone d-grid-2--cols ">
+                <Icon svgIcon="phone-big" title="phone icon" />
                 <span>{business && phone}</span>
               </div>
-              <div className="business__main__info__price">{business && price}</div>
+              <div className="business__main__info__price">
+                <span>Price:</span> {business && price}
+              </div>
               {hours[0].is_open_now ? (
                 <a
                   href={url}
@@ -82,7 +84,7 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
           <BusinessHourInfo hours={hours} />
         </article>
         <article>
-          <h2 className="business__secondary__card__title">Reviews</h2>
+          <h2 className="business__secondary__card__title">User reviews</h2>
           <BusinesReviewInfo reviews={reviews} />
         </article>
       </section>
