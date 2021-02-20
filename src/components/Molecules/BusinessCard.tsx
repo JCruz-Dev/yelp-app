@@ -14,7 +14,11 @@ const BusinessCard: React.FC<businessState> = (props: businessState): JSX.Elemen
         </div>
         <div className="card__head">
           <h2 className="card__head__title">{name}</h2>
-          {viewed && <Icon svgIcon="viewed-icon" />}
+          {viewed && (
+            <div title="you already viewed this item">
+              <Icon svgIcon="viewed-icon" title="You already viewed this item" />
+            </div>
+          )}
         </div>
         <div className="card__main__details">
           <InfoDetail icon={'star'} infoName={rating} />
