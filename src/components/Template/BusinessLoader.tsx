@@ -22,7 +22,7 @@ const BusinessLoader: React.FC = (): JSX.Element => {
           <div className="loader__item__hour"></div>
         </article>
         <article>
-          <h2 className="business__secondary__card__title">User Reviews</h2>
+          <h2 className="business__secondary__card__title">User reviews</h2>
           <div className="loader__item__review"></div>
         </article>
       </div>
