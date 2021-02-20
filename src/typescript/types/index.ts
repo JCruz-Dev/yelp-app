@@ -12,6 +12,7 @@ export type Location = {
 export type businessState = {
   __typename: string
   id: string
+  url: string
   name: string
   rating: number
   review_count: number
@@ -72,6 +73,7 @@ export type searchFormProps = {
 export type businessInfoProps = {
   business: {
     businessname: string
+    url
     rating: number
     review_count: number
     location: Location

@@ -15,6 +15,7 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
     hours,
     photos,
     reviews,
+    url,
   } = business
   return (
     <>
@@ -50,13 +51,23 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
               </div>
               <div className="business__main__info__price">{business && price}</div>
               {hours[0].is_open_now ? (
-                <button className="business__main__info__button button--open">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="business__main__info__button button--open"
+                >
                   Open right now
-                </button>
+                </a>
               ) : (
-                <button className="business__main__info__button button--close">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="business__main__info__button button--close"
+                >
                   Closed right now
-                </button>
+                </a>
               )}
             </div>
             <div className="business__main__info__image">
