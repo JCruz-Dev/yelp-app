@@ -70,7 +70,7 @@ const BusinessInfo: React.FC<businessInfoProps> = (props: businessInfoProps): JS
           <h2 className="business__secondary__card__title">Hours</h2>
           <BusinessHourInfo hours={hours} />
         </article>
-        <article className="business__secondary__card">
+        <article>
           <h2 className="business__secondary__card__title">Reviews</h2>
           <BusinesReviewInfo reviews={reviews} />
         </article>
