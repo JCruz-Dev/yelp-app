@@ -34,6 +34,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#troubleshoot">Troubleshooting</a>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -94,6 +95,13 @@ This is an example of how to list things you need to use the software and how to
 - Enter a term to search like pizza, burrito, tacos and will search in the Yelp API businesses within that categories.
 - You can click a item once they appear and see their details.
 - When you hit back button, you can view the last results of your search and the business item with 👁️ icon to make sure you already viewed that business info.
+
+## Troubleshoot
+
+In case you are using the app and is not displaying content and returns 403 error it is a CORS issue from the Yelp appi, you should enable CORS to have access and make request to the APIs with https://cors-anywhere.herokuapp.com/corsdemo enable temporary access click in the button and you are ready to go.
+
+<img src="./cors.png">
+
 <!-- LICENSE -->
 
 ## License
