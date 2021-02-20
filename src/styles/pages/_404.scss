@@ -1,0 +1,22 @@
+.notfound__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.page__gif {
+  display: block;
+  margin-bottom: 2rem;
+}
+.page__title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include fromQuery(x-large) {
+    font-size: 3rem;
+  }
+}
+.page__description {
+  margin-bottom: 2rem;
+}
