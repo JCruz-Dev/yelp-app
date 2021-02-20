@@ -48,7 +48,7 @@
 
 ### Built With
 
-- Typescsript
+- TypeScsript
 - Nextjs
 - Redux toolkit
 - Redux Persist
