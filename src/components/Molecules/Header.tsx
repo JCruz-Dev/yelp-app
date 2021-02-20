@@ -14,7 +14,7 @@ const Header: React.FC = (): JSX.Element => {
                   <LogoImage />
                 </a>
               </Link>
-              <Icon svgIcon="menu-icon" />
+              <Icon svgIcon="menu-icon" title="menu icon" />
             </div>
           </header>
         ),
