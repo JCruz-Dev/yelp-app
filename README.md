@@ -53,7 +53,7 @@
 - Redux toolkit
 - Apollo Client
 - SASS for Styling
-- Figma for the UI
+- [Figma for the UI](https://www.figma.com/file/BuEYDB27UpPEvsPPBOy9ay/Yelp-app?node-id=0%3A1)
 
 <!-- GETTING STARTED -->
 
