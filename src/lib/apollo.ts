@@ -7,7 +7,10 @@ import { AppProps } from 'next/dist/next-server/lib/router/router'
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
 // const CORS_FALLBACK =`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/graphql`
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL =
+  process.env.NODE_ENV === 'production'
+    ? process.env.NEXT_PUBLIC_API_URL
+    : process.env.NEXT_PUBLIC_DEVELOPMENT
 let apolloClient
 function createApolloClient(): ApolloClient<NormalizedCacheObject> {
   return new ApolloClient({
